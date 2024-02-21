@@ -6,9 +6,13 @@ public Student(String name){
 }
 
 public void addAssignment(String assignName) {
-    assignName = assignName + ": Ungraded";
+    assignName = assignName + " Grade: Ungraded";
 
 }
+public void gradeAssignment(String assignment, double grade){
+    assignment = assignment + " Grade: " + grade;
+}
+
 
 
 }
