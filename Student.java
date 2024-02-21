@@ -12,6 +12,11 @@ public void addAssignment(String assignName) {
 public void gradeAssignment(String assignment, double grade){
     assignment = assignment + " Grade: " + grade;
 }
+public double getAssignmentGrade(String assignment){
+    double grade = 0;
+
+}
+
 
 
 
