@@ -17,7 +17,7 @@ Public Methods for Gradebook:
 	double getAverageGrade(String assignment)
 	double getMinimumGrade(String assignment)
 	double getMaximumGrade(String assignment)
-	double getAverageOverall()
+	double getAverageOverall() 
 	double getMaxOverall()
 	double getMinOverall()
 	double getStudentsGrade()
