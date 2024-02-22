@@ -19,7 +19,16 @@ public class Gradebook {
         }
     }
     public double getAverageGrade(String assignment){
-
+        double total = 0;
+        int count = 0;
+        for(Student student : students) {
+            double grade = student.getAssignmentGrade(assignment);
+            if (grade >= 0) {
+                total += grade;
+                count++;
+            }
+        }
+        return count == 0 ? 0 : total / count;
     }
     public double getMinimumGrade(String assignment){
 
