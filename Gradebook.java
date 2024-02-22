@@ -4,6 +4,7 @@ public class Gradebook {
     private List<Student> students;
     private List<String> assignments;
     public void createStudent(String name){
+        Student s = new Student(name);
         students = new ArrayList<>();
         assignments = new ArrayList<>();
     }
