@@ -8,10 +8,10 @@ public class Gradebook {
         assignments = new ArrayList<>();
     }
     public void addAssignment(String assignment){
-
+        assignments.add(assignment);
     }
     public void gradeAssignment(String assignment, String studentName, double grade){
-
+        
     }
     public double getAverageGrade(String assignment){
 
