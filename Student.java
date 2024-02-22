@@ -1,3 +1,4 @@
+import java.util.*;
 public class Student {
 private String name;
 private List<String> grades;
