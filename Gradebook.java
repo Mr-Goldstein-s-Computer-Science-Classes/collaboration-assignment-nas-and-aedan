@@ -41,7 +41,14 @@ public class Gradebook {
         return minGrade == Double.MAX_VALUE ? 0 : minGrade;
     }
     public double getMaximumGrade(String assignment){
-        double maxGrade = 
+        double maxGrade = Double.MIN_VALUE;
+        for(Student student : students){
+            double grade = student.getAssignmentGrade(assignment);
+            if(grade > maxGrade)
+                maxGrade = grade;
+
+        }
+        return maxGrade == Double.MIN_VALUE ? 0 : maxGrade;
     }
     public double getAverageOverall(){
 
