@@ -5,13 +5,9 @@ private List<String> assignments;
 
 public Student(String name){
     this.name = name;
-    this.assignments = new List<String>();
+    this.assignments = List<String>();
 }
-public Assignment(String assignName, double grade, boolean graded){
-    this.assignName = assignName;
-    this.grade = grade;
-    this.graded = (grade > 0);
-}
+
 
 public void addAssignment(String assignName) {
     double grade = 0;
