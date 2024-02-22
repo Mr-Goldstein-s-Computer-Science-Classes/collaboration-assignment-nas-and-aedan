@@ -73,7 +73,13 @@ public class Gradebook {
         return maxGrade == Double.MIN_VALUE ? 0 : maxGrade;
     }
     public double getMinOverall(){
-        double
+        double minGrade = Double.MAX_VALUE;
+        for(Student student : students){
+            double grade = student.getOverallGrade();
+            if(grade >= 0 && grade < minGrade)
+                minGrade = grade;
+        }
+        return minGrade == Double.MAX_VALUE ? 0 : minGrade;
     }
     public double getStudentsGrade(){
 
