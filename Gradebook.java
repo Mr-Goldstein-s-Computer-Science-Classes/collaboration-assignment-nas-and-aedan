@@ -74,16 +74,27 @@ public class Gradebook {
         return maxGrade == Double.MIN_VALUE ? 0 : maxGrade;
     }
     public double getMinOverall(){
-        double
+        double minGrade = Double.MAX_VALUE;
+        for(Student student : students){
+            double grade = student.getOverallGrade();
+            if(grade >= 0 && grade < minGrade)
+                minGrade = grade;
+        }
+        return minGrade == Double.MAX_VALUE ? 0 : minGrade;
     }
-    public double getStudentsGrade(){
+    public double getStudentsGrade(){ // take IN student name, give student grades
 
     }
     public String toString(){
         //Returns the names of the students and the names of the assignments as a String
     }
     public String getStudent(String studentName){
-
+        for(Student student : students){
+            if(student.getName().equals(studentName)){
+                return student;
+            }
+        }
+        return null;
     }
 }
 
