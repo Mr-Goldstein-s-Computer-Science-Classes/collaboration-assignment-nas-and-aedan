@@ -1,28 +1,39 @@
 import java.util.*;
 public class Student {
 private String name;
-private List<String> grades;
+private List<String> assignments;
 
 public Student(String name){
     this.name = name;
-    this.grades = new List<String>();
+    this.assignments = new List<String>();
+}
+public Assignment(String assignName, double grade, boolean graded){
+    this.assignName = assignName;
+    this.grade = grade;
+    this.graded = (grade > 0);
 }
 
 public void addAssignment(String assignName) {
     double grade = 0;
+    boolean graded = false;
     assignName = assignName + " Grade: Ungraded";
-    grades.add(assignName);
+    assignments.add(assignName);
 
 }
 public void gradeAssignment(String assignment, double grade){
+   graded = true;
     assignment = assignment + " Grade: " + grade;
-    if()
+    assignments.add(assignment);
+
 }
 public double getAssignmentGrade(String assignment){
-    double grade = 0;
+  double grade;
+
+
 
 }
 public double getOverallGrade(){
+
 
 }
 
