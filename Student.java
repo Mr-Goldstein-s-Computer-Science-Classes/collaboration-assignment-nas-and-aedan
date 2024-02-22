@@ -12,6 +12,13 @@ private boolean graded;
     this.assignments = new ArrayList<String>();
     this.grades = new ArrayList<Double>();
 }
+public void setName(String name){
+        this.name = name;
+}
+public String getName(){
+        return name;
+}
+
 
 
 public void addAssignment(String assignName) {
@@ -55,9 +62,6 @@ public String toString(){
     String result = "Students name: " + this.name + " " + this.name + "'s average:" + getOverallGrade();
     return result;
 }
-
-
-
 
 
 
