@@ -53,6 +53,7 @@ public double getOverallGrade(){
     for(int i = 0; i <= grades.size();i++){
         overallGrade += grades.get(i);
     }
+    overallGrade /= grades.size();
     return overallGrade;
 
 

@@ -85,12 +85,12 @@ public class Gradebook {
         }
         return minGrade == Double.MAX_VALUE ? 0 : minGrade;
     }
-    public double getStudentsGrade(){ // take IN student name, give student grades
-        double grade = 0;
-    }
-    public String toString(){
-        //Returns the names of the students and the names of the assignments as a String
-    }
+//    public double getStudentsGrade(){ // take IN student name, give student grades
+//
+//    }
+//    public String toString(){
+//        //Returns the names of the students and the names of the assignments as a String
+//    }
     public Student getStudent(String studentName){
         for(Student student : students){
             if(student.getName().equals(studentName)){
