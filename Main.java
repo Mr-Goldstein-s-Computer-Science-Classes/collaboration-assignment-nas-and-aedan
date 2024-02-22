@@ -55,9 +55,13 @@ public class Main {
         System.out.println("Average Grade for Stacks and Queues Station Activity: " + grades.getAverageGrade("Stacks and Queues Stations quiz"));
         System.out.println("Average Grade for Stacks and Queues Station Activity: " + grades.getAverageGrade("Github Exploration"));
 
-        //5. Print out the stats for all assignments and overall grades
-        //6. Print the grades object
-        //7. Print the object of each student
+     //print grades object
+        System.out.println("\nGradebook: ");
+        System.out.println(grades);
 
+     //print obj of each student
+        for (Student student : grades.getStudents()){
+            System.out.println(student);
+        }
     }
 }
