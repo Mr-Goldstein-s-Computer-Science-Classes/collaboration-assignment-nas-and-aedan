@@ -2,13 +2,15 @@ import java.util.*;
 import java.util.List;
 public class Student {
 private String name;
-private List<String> assignments;
-private List<double> grades;
+private ArrayList<String> assignments;
+private ArrayList<Double> grades;
 
-public Student(String name){
+private boolean graded;
+
+    public Student(String name){
     this.name = name;
-    this.assignments = List<String>();
-    this.grades = List<double>();
+    this.assignments = new ArrayList<String>();
+    this.grades = new ArrayList<Double>();
 }
 
 
@@ -21,18 +23,20 @@ public void addAssignment(String assignName) {
 
 }
 public void gradeAssignment(String assignment, double grade){
-   graded = true;
+     this.graded = true;
     assignment = assignment + " Grade: " + grade;
     assignments.add(assignment);
     grades.add(grade);
 
 }
 public double getAssignmentGrade(String assignment){
+        double grade = 0;
   for(int i = 0; i <= grades.size();i++){
       if(assignment.equalsIgnoreCase(assignments.get(i))){
-          return grades.get(i);
+           grade = grades.get(i);
       }
   }
+  return grade;
 
 
 
@@ -48,7 +52,7 @@ public double getOverallGrade(){
 }
 
 public String toString(){
-    String result = "Students name: " + this.name + " " + this.name + "'s average:" + Student.getOverallGrade();
+    String result = "Students name: " + this.name + " " + this.name + "'s average:" + getOverallGrade();
     return result;
 }
 
