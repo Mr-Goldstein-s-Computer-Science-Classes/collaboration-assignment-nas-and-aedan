@@ -51,10 +51,19 @@ public class Gradebook {
         return maxGrade == Double.MIN_VALUE ? 0 : maxGrade;
     }
     public double getAverageOverall(){
-
+        double total = 0;
+        int count = 0;
+        for(Student student : students){
+            double grade = student.getOverallGrade();
+            if(grade >= 0){
+                total += grade;
+                count++;
+            }
+        }
+        return count == 0 ? 0 : total / count;
     }
     public double getMaxOverall(){
-
+        
     }
     public double getMinOverall(){
 
