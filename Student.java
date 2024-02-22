@@ -46,6 +46,11 @@ public double getOverallGrade(){
 
 }
 
+public String toString(){
+    String result = "Students name: " + this.name + " " + this.name + "'s average:" + Student.getOverallGrade();
+    return result;
+}
+
 
 
 
