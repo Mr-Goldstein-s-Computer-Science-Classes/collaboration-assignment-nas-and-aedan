@@ -63,10 +63,17 @@ public class Gradebook {
         return count == 0 ? 0 : total / count;
     }
     public double getMaxOverall(){
-        
+        double maxGrade = Double.MIN_VALUE;
+        for(Student student : students) {
+            double grade = student.getOverallGrade();
+            if(grade > maxGrade){
+                maxGrade = grade;
+            }
+        }
+        return maxGrade == Double.MIN_VALUE ? 0 : maxGrade;
     }
     public double getMinOverall(){
-
+        double 
     }
     public double getStudentsGrade(){
 
@@ -78,6 +85,16 @@ public class Gradebook {
 
     }
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
