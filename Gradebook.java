@@ -89,8 +89,11 @@ public class Gradebook {
     }
     public String getStudent(String studentName){
         for(Student student : students){
-            if(student.get)
+            if(student.getName().equals(studentName)){
+                return student;
+            }
         }
+        return null;
     }
 }
 
