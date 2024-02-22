@@ -1,8 +1,11 @@
 import java.util.*;
 import java.util.ArrayList;
 public class Gradebook {
+    private List<Student> students;
+    private List<String> assignments;
     public void createStudent(String name){
-
+        students = new ArrayList<>();
+        assignments = new ArrayList<>();
     }
     public void addAssignment(String assignment){
 
