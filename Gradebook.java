@@ -3,6 +3,8 @@ import java.util.ArrayList;
 public class Gradebook {
     private List<Student> students;
     private List<String> assignments;
+
+    private List<Double> grades;
     public void createStudent(String name){
         Student s = new Student(name);
         students = new ArrayList<>();
@@ -18,6 +20,7 @@ public class Gradebook {
                 break;
             }
         }
+        grades.add(grade);
     }
     public double getAverageGrade(String assignment){
         double total = 0;
@@ -83,12 +86,12 @@ public class Gradebook {
         return minGrade == Double.MAX_VALUE ? 0 : minGrade;
     }
     public double getStudentsGrade(){ // take IN student name, give student grades
-
+        double grade = 0;
     }
     public String toString(){
         //Returns the names of the students and the names of the assignments as a String
     }
-    public String getStudent(String studentName){
+    public Student getStudent(String studentName){
         for(Student student : students){
             if(student.getName().equals(studentName)){
                 return student;

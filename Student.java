@@ -20,6 +20,7 @@ public String getName(){
 }
 
 
+
 public void addAssignment(String assignName) {
     double grade = 0;
     boolean graded = false;
