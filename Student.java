@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.List;
 public class Student {
 private String name;
 private List<String> assignments;
